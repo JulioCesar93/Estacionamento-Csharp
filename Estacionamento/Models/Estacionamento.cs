@@ -14,9 +14,12 @@ namespace Estacionamento.Models
 
         public void AdicionarVeiculo()
         {
-            // TODO: Pedir para o usuário digitar uma placa (ReadLine) e adicionar na lista "veiculos"
-            // *IMPLEMENTE AQUI*
-            Console.WriteLine("Digite a placa do veículo para estacionar:");
+            Console.WriteLine("~~~~~~~~~~~~~~\n");
+            Console.WriteLine("\nDigite a placa do veículo para estacionar: \n");
+            string placa = "";
+            placa = Console.ReadLine();
+            veiculos.Add(placa != null ? placa : "");
+        }
         }
 
         public void RemoverVeiculo()
