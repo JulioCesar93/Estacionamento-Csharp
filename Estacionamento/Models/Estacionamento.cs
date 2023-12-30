@@ -12,6 +12,7 @@ namespace Estacionamento.Models
             this.precoPorHora = precoPorHora;
         }
 
+        // ------------------------------
         public void AdicionarVeiculo()
         {
             Console.WriteLine("~~~~~~~~~~~~~~\n");
@@ -20,7 +21,8 @@ namespace Estacionamento.Models
             placa = Console.ReadLine();
             veiculos.Add(placa != null ? placa : "");
         }
-        }
+        
+        // ------------------------------
 
         public void RemoverVeiculo()
         {
@@ -46,18 +48,22 @@ namespace Estacionamento.Models
             }
         }
 
+        // ----------------------------------------
         public void ListarVeiculos()
         {
-            // Verifica se há veículos no estacionamento
-            if (veiculos.Any())
+             if (veiculos.Any())
             {
-                Console.WriteLine("Os veículos estacionados são:");
-                // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
-                // *IMPLEMENTE AQUI*
+                Console.WriteLine("~~~~~~~~~~~~~~\n");
+                Console.WriteLine("\n Os veículos estacionados são:\n");
+
+                foreach(string veiculo in veiculos)
+                {
+                    Console.WriteLine(veiculo);
+                }
             }
             else
             {
-                Console.WriteLine("Não há veículos estacionados.");
+                Console.WriteLine("\n Não há veículos estacionados.\n");
             }
         }
     }
